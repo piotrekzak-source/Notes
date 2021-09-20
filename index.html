@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./css/all.css" />
+
+		<link rel="stylesheet" href="style.css" />
+		<title>MyNotes</title>
+	</head>
+	<body>
+		<div class="menu">
+			<h1><i class="fas fa-sticky-note"></i>MyNotes</h1>
+			<div class="menu-buttons">
+				<button class="add icon">
+					<i class="fas fa-plus"></i> Add
+				</button>
+				<button class="delete-all" onclick="deleteAllNotes()">
+					<i class="fas fa-trash-alt"></i> Delete all
+				</button>
+			</div>
+		</div>
+
+		<div class="note-area">
+			<div class="note">
+				<div class="note-header">
+					<h3 class="note-title">Note #1</h3>
+					<button class="delete-note">
+						<i class="fas fa-times fa-icons"></i>
+					</button>
+				</div>
+				<div class="note-body">
+					Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+					do eiusmod tempor incididunt ut labore et dolore magna
+					aliqua. At risus viverra adipiscing at in tellus integer
+					feugiat. Quis vel eros donec ac odio tempor. Mauris a diam
+					maecenas sed enim ut sem viverra aliquet. Auctor elit sed
+					vulputate mi sit. Vitae auctor eu augue ut lectus arcu
+					bibendum at varius. Tempus iaculis urna id volutpat.
+					Consectetur libero id faucibus nisl tincidunt eget nullam
+					non. Aliquam purus sit amet luctus venenatis lectus magna
+					fringilla urna. Id semper risus in hendrerit gravida rutrum
+					quisque. Orci phasellus egestas tellus rutrum tellus
+					pellentesque eu. Amet cursus sit amet dictum sit amet justo
+					donec. Volutpat commodo sed egestas egestas fringilla
+					phasellus faucibus scelerisque. Neque laoreet suspendisse
+					interdum consectetur libero id faucibus nisl. Lorem dolor
+					sed viverra ipsum. Bibendum arcu vitae elementum curabitur
+					vitae. Ullamcorper velit sed ullamcorper morbi
+				</div>
+			</div>
+		</div>
+		<div class="note-panel">
+			<h2>Add notes</h2>
+			<label for="category">Choose category</label>
+			<select id="category" onchange="selectValue()">
+				<option value="0" disabled selected>- choose category -</option>
+				<option value="1">Shopping</option>
+				<option value="1">Work</option>
+				<option value="1">Other</option>
+			</select>
+
+			<label for="text">Type the content of the note</label>
+			<textarea id="text"></textarea>
+
+			<p class="error">Complete all fields!</p>
+
+			<div class="panel-buttons">
+				<button class="save icon">
+					<i class="fas fa-save"></i> Save
+				</button>
+				<button class="cancel icon">
+					<i class="fas fa-window-close"></i> Cancel
+				</button>
+			</div>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
